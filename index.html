@@ -6,12 +6,16 @@
   <title>Course Star Review</title>
   <link rel="stylesheet" href="style.css">
   <style>
+        footer a:link, footer a:visited {
+            color: rgb(82, 116, 184);
+        }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      margin-bottom:0px;
     }
 
     header {
@@ -19,6 +23,10 @@
       color: white;
       padding: 2rem 1rem 1rem;
       text-align: center;
+    }
+
+    h1 {
+        font-size: 500%;
     }
 
     nav {
@@ -104,6 +112,7 @@
         padding: 1rem;
         white-space: pre-wrap;
         word-wrap: break-word;
+        color: #b67600;
         }
 
         .file-structure ul {
@@ -130,6 +139,45 @@
         html {
             scroll-behavior: smooth;
         }
+        img {
+            max-width: 600px;
+            max-height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        p {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 120%;
+        }
+
+        ul {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 120%;
+        }
+        nav li {
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            background: rgb(12, 12, 12);
+            margin-bottom: 0px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: white;
+        }
+        footer p {
+            text-align: center;
+        }
+
 
   </style>
 </head>
@@ -148,6 +196,7 @@
       <li><a href="#data">Data and Analysis</a></li>
       <li><a href="#cybersecurity">Cybersecurity</a></li>
       <li><a href="#impacts">Impacts on Society</a></li>
+      <li><a href="#finalreflect">Goal Reflection</a></li>
     </ul>
   </nav>
 
@@ -298,7 +347,6 @@
                         return recordBots(raw_data)
             </pre>
         </div>
-        
         <h3>Project 2 - Journal Entry App</h3>
         <p>This project was anything that could qualify as storage of journal entries which included saving, editing, and keeping track of times.</p>
         <p>My implementation of this project achieved: </p>
@@ -633,8 +681,8 @@
         </pre>
       </div>
       <p>Back to journal entry app, server was made with cyber securit considerations in mind: </p>
-      <div id="code-block">
-        <div id="filename">remote.js</div>
+      <div class="code-block">
+        <div class="filename">remote.js</div>
         <pre>
             const port = 3000; // port 3000 is what i used for connections
             ...
@@ -722,6 +770,17 @@
         </figure>
       </section>
     </div>
+    <div id="finalreflect">
+        <h2>Final Reflection!</h2>
+        <figure>
+            <img src="docs/goals.png" />
+            <figcaption>Midterm Star Review Goals</figcaption>
+        </figure>
+    </div>
   </main>
+  <footer>
+    <h2>Created by Aleks Lillis &copy;</h2>
+    <p><a href="mailto:2681292@sau9.org">2681292@sau9.org</a></p>
+  </footer>
 </body>
 </html>
