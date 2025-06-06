@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Star Review</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #282c34;
+      color: white;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #282c34;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    nav li {
+      flex: 0 0 auto;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 1rem;
+      background-color: #61dafb;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #21a1f1;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content {
+      margin-bottom: 2rem;
+    }
+
+    .code-block {
+        background-color: #1e1e1e;
+        color: #dcdcdc;
+        border-radius: 8px;
+        font-family: Consolas, monospace;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        position: relative;
+        padding-top: 2rem;
+        }
+
+        .code-block .filename {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 0.25rem 0.75rem;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        font-weight: bold;
+        }
+
+        .code-block pre {
+        margin: 0;
+        padding: 1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        }
+
+        .file-structure ul {
+        list-style: none;
+        padding-left: 1em;
+        margin: 0;
+        }
+
+        .file-structure li {
+        font-family: monospace;
+        line-height: 1.5;
+        position: relative;
+        }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aleks Lillis Star Review</h1>
+    <p>For the 2024-25 Academic School Year</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#algorithms">Algorithms and Programming</a></li>
+      <li><a href="#networks">Networks and the Internet</a></li>
+      <li><a href="#systems">Computing Systems</a></li>
+      <li><a href="#data">Data and Analysis</a></li>
+      <li><a href="#cybersecurity">Cybersecurity</a></li>
+      <li><a href="#impacts">Impacts on Society</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="about" class="content">
+      <h2>About Me</h2>
+      <h3>Hello, I'm Aleks!</h3>
+      <p>I'm a third year Computer Science Student of the Kennett High School Career and Technical Education Center.</p>
+      <p>Throughout these last years I have garnered proficiency in various programming languages: </p>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>C/C++</li>
+      </ul>
+      <p>This last year I have done my work through the apprentice pathway. This was because I was enthusiastic to do a little bit of everything.</p>
+      <p>As well as this, I have completed and will demonstrate the following computer science competencies: </p>
+      <ul>
+        <li>Algorithms and Programming</li>
+        <li>Networks and the Internet</li>
+        <li>Computing Systems</li>
+        <li>Data and Analysis</li>
+        <li>Cybersecurity</li>
+        <li>Impact on Society</li>
+      </ul>
+      <h3>My Resume</h3>
+      <iframe src="docs/Lillis_Aleks_Resume.pdf" width="100%" height="600px"></iframe>
+      <h3>Computer Science Certification</h3>
+      <p>Through this program I have earned the valuable PCEP&trade; - Certified Entry Level Python Programmer certification and am aiming to complete the ITF Computer Science Fundamentals certification by the end of the year.</p>
+      <iframe src="docs/certificate_Ajec.Ez9H.s8AF.pdf" width="100%" height="400px"></iframe>
+    </div>
+
+    <div id="algorithms" class="content">
+      <h2>Algorithms and Programming</h2>
+      <h3>Project 1 - Ronbit.py package</h3>
+      <p>This was a collaborative project to create a python-compatible class for connecting and controlling the LocoXtreme package.</p>
+      <p>Achievements of this project are as follow: </p>
+      <ul>
+        <li>Succesfully connecting to the USB using the serial ports</li>
+        <li>Succesfully connecting to the robot from the USB</li>
+        <li>Creating custom functions for connecting and disconnecting to the robot, modifying LED lights, and for moving the robot</li>
+        <li>Removing unnecessary parts of the java library when checking for and connecting to the robot</li>
+      </ul>
+
+      <p>As seen below, whenever robots were on hex code was being broadcast to the usb in a hard to read format.</p>
+        <div class="code-block">
+            <div class="filename">example_hex.txt</div>
+                <pre>
+                    one robot:
+                    000f00ee80a927fd846c722038303a6565000f00ee80a927fd846c722038303a6565000f00ee80a927fd846c722038303a6565
+                    two robit:
+                    000f00ee80a927fd846c722038303a6565000f00e480a927fd846c722038303a6534000f00e480a927fd846c722038303a6534000f00ee80a927fd846c722038303a6565000f00e480a927fd846c722038303a6534000f00ee80a927fd846c722038303a6565000f00e480a927fd846c722038303a6534000f00e480a927fd846c722038303a6534000f00ee80a927fd846c722038303a6565000f00e480a927fd846c722038303a6534
+                </pre>
+            </div>
+        </div>
+        <p>This is the ronbit package's implementation of recording information from robots broadcasting their data. This was much more readable compared to the java implementation which included many loops.</p>
+        <div class="code-block">
+            <div class="filename">ronbit.py</div>
+            <pre>
+                def recordBots(data): # returns a dictionary of bots and info based on raw data
+                    bots = {}
+                    name_length = 0
+                    name = ""
+                    while len(data):
+                        #trim first 2 chars because useless
+                        data = data[2:]
+                        
+                        name_length = int((data[:2]), 16) - 7
+                        data = data[2:]
+                        
+                        mac_type = data[:2]
+                        data = data[2:]
+                        
+                        mac_address = data[:12]
+                        data = data[12:]
+                        
+                        name = hex_string_to_ascii(data[:(name_length * 2)])
+                        data = data[(name_length * 2):]
+                        
+                        bots[name] = [mac_type, mac_address]
+                    return bots
+            </pre>
+        </div>
+        <p>The python implementation also shows proficiency in class structure: </p>
+        <div class="code-block">
+            <div class="filename">ronbit.py</div>
+            <pre>
+                class ronbit:
+                    def __init__(...):
+                        ...initialization of variables
+                    
+                    def set_port(...):
+                        ...set the USB port of ronbit object
+                    
+                    def passthrough(...):
+                        ...function to send formatted data to the robot
+                    
+                    def connect(...):
+                        ...implementation of connecting to robot from its name
+                    
+                    def disconnect():
+                        ...implementation to disconnect the actively connected robot
+                    
+                    def activate_motors():
+                        ...function that activates motors
+                    
+                    def deactivate_motors():
+                        ...function that deactivates motors
+
+                    def set_lights(...):
+                        ...function that sets the color of the led light circle surrounding the robot
+
+                    def move_robot(...):
+                        ...function that allows movement of the robot
+            </pre>
+        </div>
+        <p>This program required lots of input validation especially because it was dealing with sending data which may not be received. Here is an example of validation within a function from this project.</p>
+        <div class="code-block">
+            <div class="filename">ronbit.py</div>
+            <pre>
+                def check_bots(port_name, timeout = 2): # searches all of the bots available
+                    start_time = time.time()
+                    start_scan = bytearray.fromhex('01')
+                    stop_scan = bytearray.fromhex('02')
+                    raw_data = ""
+                    try:
+                        serial_port = Serial(port_name)
+                        serial_port.write(start_scan)
+                        while (time.time() - start_time <= timeout):
+                            if serial_port.in_waiting > 0:
+                                data = serial_port.read(1)
+                                raw_data += data.hex()
+
+                        serial_port.write(stop_scan)
+                        serial_port.close()
+                    except:
+                        print("Error: unable to scan for bots")
+                        return {}
+
+                    if (len(raw_data) == 0):
+                        print("Error: nothing received from scan")
+                        return {}
+                    else:
+                        return recordBots(raw_data)
+            </pre>
+        </div>
+        
+        <h3>Project 2 - Journal Entry App</h3>
+        <p>This project was anything that could qualify as storage of journal entries which included saving, editing, and keeping track of times.</p>
+        <p>My implementation of this project achieved: </p>
+        <ul>
+            <li>GUI which allows for increasing amounts of journal entries</li>
+            <li>Server which is run and stores public posts</li>
+            <li>Client code which is able to convert json from server and display as post</li>
+        </ul>
+        <p>This was my first packaged project and used many different files and components which worked together!</p>
+        <p>File structure: </p>
+        <div class="file-structure">
+            <ul>
+                <li>📁 app</li>
+                <ul>
+                    <li>📁 src</li>
+                    <ul>
+                        <li>📁 main
+                        <ul>
+                            <li>📁 java</li>
+                            <ul>
+                                <li>📁 com</li>
+                                <ul>
+                                    <li>📄 ConnectionErrorPanel.java</li>
+                                    <li>📄 CreateEntryPanel.java</li>
+                                    <li>📄 EditEntryPanel.java</li>
+                                    <li>📄 EntriesPanel.java</li>
+                                    <li>📄 Entry.java</li>
+                                    <li>📄 Main.java</li>
+                                    <li>📄 MyEntriesPanel.java</li>
+                                    <li>📄 UsernameLoginPanel.java</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                        <li>📁 resources</li>
+                        <ul><li>📄 sqlite.jar</li></ul>
+                    </li>
+
+                </ul>
+            </ul>
+        </div>
+
+        <p>The remote server which hosts all of the journal information is done with javascript </p>
+        <div class="code-block">
+            <div class="filename">remote.js</div>
+            <pre>
+                const express = require('express'); // importing the express library
+                const sqlite3 = require('sqlite3').verbose(); // sqlite import
+                const app = express(); // initialize express 
+                const port = 3000; // port 3000 is what i used for connections
+
+                // express is the library that I used allowing me to connect to the database
+                app.use(express.json());
+
+                // connects to the sql database with all the posts
+                const db = new sqlite3.Database('./journal.db', (err) => {
+                if (err) {
+                    console.error(err.message);
+                }
+                console.log('database connection established.');
+                });
+
+                db.run(`
+                    CREATE TABLE IF NOT EXISTS entries (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        title TEXT NOT NULL,
+                        date_published TEXT NOT NULL,
+                        entry_text TEXT NOT NULL,
+                        username TEXT NOT NULL,
+                        is_public INTEGER NOT NULL DEFAULT 1
+                    );
+                `);
+
+                // responds with all of the entries which are public
+                app.get('/entries', (req, res) => {
+                    db.all(`SELECT * FROM entries WHERE is_public = 1`, (err, rows) => {
+                        if (err) {
+                            console.error(err.message);
+                            res.status(500).send('Error retrieving entries');
+                        } else {
+                            res.json(rows);
+                        }
+                    });
+                });
+
+
+                ... implementation of all other functions
+
+                app.listen(port,"0.0.0.0", () => { // listen for incoming requests
+                    console.log(`Server listening on port ${port}`);
+                });
+            </pre>
+        </div>
+
+        <p>This is compiled to be the jouranl entry application!</p>
+        <figure>
+            <img src="docs/jrnl1.png" />
+            <figcaption>Image of public journal entries!</figcaption>
+        </figure>
+        <figure>
+            <img src="docs/jrnl2.png" />
+            <figcaption>Image of private journal entries while signed in as user "me!!!"</figcaption>
+        </figure>
+
+        <h3>Project 3 - Minecraft Mod</h3>
+        <p>Tihs is an in-progress project which is modifying existing minecraft features and adding some of its own.</p>
+        <p>Goals of this project include: </p>
+        <ul>
+            <li>Adding new blocks</li>
+            <li>Adding an interactable workbench</li>
+            <li>Adding a new tool which interacts with surrounding blocks</li>
+        </ul>
+        <p>In this project one thing that I think has been very important to our current success is the encapsulation of the process of creating new objects and items.</p>
+        <div class="file-structure">
+            <ul>
+                <li>📁 src
+                <ul>
+                    <li>📁 main
+                    <ul>
+                        <li>📁 java
+                        <ul>
+                            <li>📁 com
+                            <ul>
+                                <li>📁 avacado
+                                <ul>
+                                    <li>📁 iceplus
+                                    <ul>
+                                        <li>📄 Config.java</li>
+                                        <li>📄 Grok.java</li>
+                                        <li>📄 IcePlusMod.java</li>
+                                        <li>📄 ModBlocks.java</li>
+                                        <li>📄 VeryBlueIce.java</li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                </li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <p>The IcePlusMod.java file is the main file. Calls all necessary methods to load mod content.</p>
+        <div class="code-block">
+            <div class="filename">IcePlusMod.java</div>
+            <pre>
+                package com.avacado.mymod;
+
+                import ...all of the necessary imports
+
+                @Mod(IcePlusMod.MODID)
+                public class IcePlusMod {
+
+                    private static final Logger LOGGER = LogUtils.getLogger();
+                    public static final String MODID = "iceplus";
+
+
+                    public IcePlusMod() {
+                        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+                        modEventBus.addListener(this::commonSetup);
+
+                        ModBlocks.register(modEventBus);
+
+                        MinecraftForge.EVENT_BUS.register(this);
+                        
+                        modEventBus.addListener(ModBlocks::addCreative);
+
+                        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+                    }
+                }
+            </pre>
+        </div>
+        <p>In the above code segment, <code>ModBlocks.register(modEventBus)</code> is called. This allows for super easy creation of blocks or items!</p>
+        <div class="code-block">
+            <div class="filename">ModBlocks.java</div>
+            <pre>
+                package com.avacado.mymod;
+
+                import ...all of the necessary imports
+
+                @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+                public class ModBlocks {
+                    public static final String MODID = "iceplus";
+
+                    // very blue ice block in item and block 
+                    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VeryBlueIce.MODID);
+                    public static final RegistryObject<Block> VERY_BLUE_ICE  = BLOCKS.register("very_blue_ice", () -> new VeryBlueIce());
+
+                    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VeryBlueIce.MODID);
+                    public static final RegistryObject<BlockItem> VERY_BLUE_ICE_ITEM = ITEMS.register("very_blue_ice", () -> new BlockItem(VERY_BLUE_ICE.get(), new Item.Properties()));
+                    
+                    //  register grok item
+                    public static final RegistryObject<Item> GROK = ITEMS.register("grok", Grok::new);
+
+
+                    // register items in creative mode
+                    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+
+                    public static void register(IEventBus eventBus) {
+                        BLOCKS.register(eventBus);
+                        ITEMS.register(eventBus);
+                        CREATIVE_MODE_TABS.register(eventBus);
+                    }
+
+                    public static void addCreative(BuildCreativeModeTabContentsEvent event) {
+                        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                            event.accept(VERY_BLUE_ICE_ITEM);
+                        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+                            event.accept(GROK);
+                    }   
+                }
+            </pre>
+        </div>
+        <p>This makes the process of creating and adding new items/blocks super simple and concise!</p>
+        <div class="code-block">
+            <div class="filename">Grok.java</div>
+            <pre>
+                package com.avacado.mymod;
+
+                import ...all necessary imports
+
+                public class Grok extends Item {
+
+                    public static final String MODID = "iceplus";
+
+                    public Grok () {
+                        super(new Item.Properties()
+                        .stacksTo(3)
+                        .food(new Builder() 
+                            .alwaysEdible()
+                            .nutrition(1)
+                            .saturationModifier(-0.5f)
+                            .build())
+                        ); 
+                    }
+                }
+            </pre>
+        </div>
+        <h3>To reiterate, these projects display competency in: </h3>
+        <ul>
+            <li>Creating programs that are useful and work well...</li>
+            <li>Choosing the right information to use in my program...</li>
+            <li>Breaking big problems into smaller, easier parts...</li>
+            <li>Using existing solutions and combine them to solve problems...</li>
+            <li>Comparing different solutions to find the best one...</li>
+            <li>Following steps of the design proecss to develop projects...</li>
+            <li>Testing my program with users to make it better...</li>
+            <li>Using programming tools (variables, conditionals, etc)...</li>
+        </ul>
+    </div>
+
+    <div id="networks" class="content">
+      <h2>Networks and the Internet</h2>
+      <h3></h3>
+    </div>
+
+    <div id="systems" class="content">
+      <h2>Computing Systems</h2>
+      <p>Your review and star rating goes here.</p>
+    </div>
+
+    <div id="data" class="content">
+      <h2>Data and Analysis</h2>
+      <p>Your review and star rating goes here.</p>
+    </div>
+
+    <div id="cybersecurity" class="content">
+      <h2>Cybersecurity</h2>
+      <p>Your review and star rating goes here.</p>
+    </div>
+
+    <div id="impacts" class="content">
+      <h2>Impacts on Society</h2>
+      <p>Your review and star rating goes here.</p>
+    </div>
+  </main>
+</body>
+</html>
