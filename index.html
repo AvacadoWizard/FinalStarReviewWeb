@@ -127,6 +127,10 @@
 
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
   </style>
 </head>
 <body>
@@ -604,10 +608,119 @@
 
     <div id="cybersecurity" class="content">
       <h2>Cybersecurity</h2>
+      <h3>Linux Virtual Machine Classwork!</h3>
+      <p>I have developed projects in linux exploring backdoors and network configurations. All of this has been done <b>ethically</b>.</p>
+      <div class="code-block">
+        <div class="filename">backdoor.py</div>
+        <pre>
+            def get_system_info():
+                info = {
+                    'OS': playform.system(),
+                    'OS Version': platform.version(),
+                    'CPU': platform.processor(),
+                    'CPU Usage': psutil.cpu_percent(),
+                    'Memory Usage': psutil.virtual_memory().percent
+                }
+                return str(info)
+            
+            while True:
+                command = clientsocket.recv(1024).decode()
+                if command == "exit":
+                    break
+                elif command == "system_info":
+                    output = get_system_info()
+                clientsocket.send(output.encode())
+        </pre>
+      </div>
+      <p>Back to journal entry app, server was made with cyber securit considerations in mind: </p>
+      <div id="code-block">
+        <div id="filename">remote.js</div>
+        <pre>
+            const port = 3000; // port 3000 is what i used for connections
+            ...
+            app.listen(port,"0.0.0.0", () => {
+                console.log(`Server listening on port ${port}`);
+            });
+        </pre>
+      </div>
     </div>
 
     <div id="impacts" class="content">
-      <h2>Impacts on Society</h2>
+      <h2>Technology's Impacts on Society</h2>
+      <section>
+        <h3>Impacts on the Environment and Energy Usage</h3>
+        <h4>Generative AI's Impact on the Environment</h4>
+        <a href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117"><p>Source: MIT News</p></a>
+        <ul>
+            <li>AI Models were very quickly developed the last few years</li>
+            <li>Cooling requires lots of water for the training, deployment, and fine-tuning</li>
+            <li>More advanced AI models require stronger computing hardware</li>
+            <li>Power requirements have increased drastically</li>
+            <ul>
+                <li>2022: 2,688 megawatts</li>
+                <li>2023: 5,341 megawatts</li>
+            </ul>
+            <li>Each AI query has been found to consume five times as much electricity as a simple web search</li>
+        </ul>
+        <figure>
+            <img src="docs/download (1).jpeg" />
+            <figcaption>Stereotypical Data Center</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Impacts on Society and Culture</h3>
+        <h4>AI Usage at Work and School</h4>
+        <a href="https://www.mbs.edu/faculty-and-research/trust-and-ai/Key-findings-on-AI-at-work-and-in-education"><p>Source: Melbourne Business School</p></a>
+        <ul>
+            <li>Globally, 58% of people are using AI at work</li>
+            <li>47% employees say they have used AI in an inappropriate manner</li>
+            <li>AI Usage has increased from 34% to 71%</li>
+            <li>With this usage of AI, turst has decreased</li>
+            <li>With increased use of AI globally, roughly 30% of students report reduced critical thinking skills</li>
+        </ul>
+        <figure>
+            <img src="docs/Screenshot 2025-06-06 10.50.26 AM.png" />
+            <figcaption>Graph of AI Usage Globally</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Impacts on Data Privacy</h3>
+        <h4>Privacy Issues of AI</h4>
+        <a href="https://www.ibm.com/think/insights/ai-privacy"><p>Source: IBM</p></a>
+        <ul>
+            <li>Collection of data (terabytes and perabytes of information)</li>
+            <li>Sensative information may be included</li>
+            <ul>
+                <li>Healthcare Information</li>
+                <li>Personal Social Media Data</li>
+                <li>Personal Finance Data</li>
+                <li>Biometric Data</li>
+            </ul>
+            <li>Data breaches can expose training data</li>
+            <li>Policies are made to prevent illegal collection of data</li>
+            <ul>
+                <li>California Consumer Privacy Act</li>
+                <li>Illinois' Biometric Information Act</li>
+            </ul>
+        </ul>
+        <img src="docs/leadspace_article.jpeg" />
+      </section>
+      <section>
+        <h3>Impacts on Decision-Making</h3>
+        <h4>RFK Jr's Make America Healthy Again (MAHA) Report</h4>
+        <a href="https://www.theguardian.com/us-news/2025/may/29/rfk-jr-maha-health-report-studies"><p>Source: The Guardian</p></a>
+        <ul>
+            <li>RFK is US Health Secretary</li>
+            <li>Created a "gold-standard" science report</li>
+            <li>Backed by 500 citations</li>
+            <li>References to 7 inexistent studies</li>
+            <li>Various others which have misrepresented data</li>
+        </ul>
+        <figure>
+            <img src="docs/3491.avif" />
+            <figcaption>RFK at a Senate Hearing</figcaption>
+        </figure>
+      </section>
     </div>
   </main>
 </body>
